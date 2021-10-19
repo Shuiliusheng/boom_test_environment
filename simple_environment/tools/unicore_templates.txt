@@ -1,0 +1,35 @@
+inst: add rd, rs1, rs2 << #imm5
+list: opcode_8 rs1 rd imm5 fuc4_0 rs2
+label: ADD_L_IMM
+
+inst: add.a rd, rs1, rs2 >> #imm5
+list: opcode_9 rs1 rd imm5 fuc4_2 rs2
+label: ADDA_R_IMM
+
+inst: add rd, rs1, rs2 >> rss
+list: opcode_8 rs1 rd rss fuc4_3 rs2
+label: ADD_L_REG
+
+inst: add.a rd, rs1, rs2 <> rss
+list: opcode_9 rs1 rd rss fuc4_7 rs2
+label: ADDA_LR_REG
+
+inst: addc.a rd, rs1, rs2 << #imm5
+list: opcode_B rs1 rd imm5 fuc4_0 rs2
+label: ADDCA_L_IMM
+
+inst: addc.a rd, rs1, rs2 >> rss
+list: opcode_B rs1 rd rss fuc4_3 rs2
+label: ADDCA_R_REG
+
+inst: add.a rd, rs1, #imm9 <> #imm5
+list: opcode_29 rs1 rd imm5 imm9
+label: ADDIA_LR_IMM
+
+inst: addc.a rd, rs1, #imm9 <> #imm5
+list: opcode_2B rs1 rd imm5 imm9
+label: ADDICA_LR_IMM
+
+inst: mulsl rd1, rd2, rs1, rs2
+list: opcode_C rs1 rd1 rd2 fuc4_9 rs2
+label: MULSL
